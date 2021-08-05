@@ -26,8 +26,6 @@ var options = {
     originLatitude = parseFloat(`${crd.latitude}`);
     originLongitude = parseFloat(`${crd.longitude}`);
 
-    console.log(originLatitude);
-    console.log(originLongitude);
   }
   
   function error(err) {
