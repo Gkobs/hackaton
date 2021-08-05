@@ -27,3 +27,13 @@ body{
     src: url("/fonts/BatmanForeverOutline.ttf") format("ttf"); 
     color: #FFED00;
 }
+
+#center{
+  display: none;
+  text-align: center;
+}
+
+#map{
+  margin-left: auto;
+  margin-right: auto;
+}

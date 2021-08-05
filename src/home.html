@@ -23,6 +23,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 ​  <link rel="stylesheet" href="stylesheet.css">
   <meta name="theme-color" content="#1C1C1B">
+
+  <style>
+    /* Set the size of the div element that contains the map */
+   #map {
+     height: 400px;
+     width: 600px;
+    }
+ </style>
 </head>
 ​
 <body>
@@ -35,38 +43,41 @@
 ​
   <!-- FORM -->
   
-  <form class="formformfrom">
-
-    <img src="/Images/bAPPman logo.png" class="logoImage" >
-    <p></p>
-    <br>
+      <img src="/Images/bAPPman logo.png" class="logoImage" >
+      <p></p>
+      <br>
+      <form class="formformfrom" id="form" style="display: block;">
     
-      <div class="mb-0">
-        <label for="exampleInputEmail1" id="formtitle">First Name</label>
-        <input type="first name" class="form-control" id="InputFirstName" placeholder="first name">
-      </div>
-​
-      <div class="mb-0">
-        <label for="exampleInputLastName1" id="formtitle">Last Name</label>
-        <input type="last name" class="form-control" id="InputLastName" placeholder="last name">
-      </div>
-​
-      <div class="mb-4">
-        <label for="exampleInputPhone1" id="formtitle">Phone</label>
-        <input type="Phone" class="form-control" id="InputPhone" placeholder="Phone">
-      </div>
+        <div class="mb-0">
+          <label for="exampleInputEmail1" id="formtitle">First Name</label>
+          <input type="first name" class="form-control" id="InputFirstName" placeholder="first name">
+        </div>
+  ​
+        <div class="mb-0">
+          <label for="exampleInputLastName1" id="formtitle">Last Name</label>
+          <input type="last name" class="form-control" id="InputLastName" placeholder="last name">
+        </div>
+  ​
+        <div class="mb-4">
+          <label for="exampleInputPhone1" id="formtitle">Phone</label>
+          <input type="Phone" class="form-control" id="InputPhone" placeholder="Phone">
+        </div>
 
-      <div class="mb-3">
-        <label for="exampleInputEmail1" id="formtitle">Situation</label>
-        <input type="email" class="form-control" id="InputEmail" placeholder="There's always a Batman ready to deploy">
-      </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" id="formtitle">Situation</label>
+          <input type="email" class="form-control" id="InputEmail" placeholder="There's always a Batman ready to deploy">
+        </div>
 ​
-      <p>
-​
-      <button type="submit" class="btn btn-warning">Send Bat Signal</button>
+        <button type="submit" class="btn btn-warning" onclick="loadMap()">Send Bat Signal</button>
     
-</form>
-​
+      </form>
+    </div>
+  </div>
+
+  <div id="center">
+    <div id="map"></div>
+    <div id="msg"></div>
+  </div>
 ​
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
@@ -78,6 +89,11 @@
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
+  <!--Load the API from the specified URL -- remember to replace YOUR_API_KEY-->
+  <script src = 'scripts/distance.js'></script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkl2hxGta8Dr7Bi2hYwPdeFCrW9lntVcY&callback=initMap">
+  </script>
 </body>
 ​
 </html>

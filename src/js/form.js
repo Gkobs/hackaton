@@ -16,8 +16,6 @@ var options = {
   
   function success(pos) {
     var crd = pos.coords;
-
-   
   
     console.log(locationRightFormat);
 
@@ -25,6 +23,7 @@ var options = {
     console.log(`Latitude : ${crd.latitude}`);
     console.log(`Longitude: ${crd.longitude}`);
     console.log(`More or less ${crd.accuracy} meters.`);
+
   }
   
   function error(err) {
