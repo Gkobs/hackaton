@@ -1,0 +1,29 @@
+.jumbotronjumbotron-fluid{
+      background-color: #1C1C1B;
+  }
+
+body{
+    background-color: #1C1C1B;
+}
+
+.logoImage{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+}
+
+
+  
+
+.formformfrom {
+    font-family: "BatmanForeverAlternate";
+    src: url("/fonts/BatmanForeverAlternate.ttf") format("ttf");
+    color: #FFED00;
+  };
+
+#formtitle{
+    font-family: "BatmanForeverOutline";
+    src: url("/fonts/BatmanForeverOutline.ttf") format("ttf"); 
+    color: #FFED00;
+}
