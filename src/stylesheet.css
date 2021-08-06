@@ -13,9 +13,6 @@ body{
         width: 90%;
 }
 
-
-  
-
 .formformfrom {
     font-family: "BatmanForeverAlternate";
     src: url("/fonts/BatmanForeverAlternate.ttf") format("ttf");
@@ -40,4 +37,16 @@ body{
 
 #msg{
   color: #FFED00;
+}
+
+#submitButton{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#InputEmail{
+  height: 150px;
+  vertical-align: text-top;
 }
