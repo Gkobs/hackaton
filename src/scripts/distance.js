@@ -44,7 +44,7 @@ function initMap() {
 
   map.data.setStyle({visible: false});
   // Locations of landmarks
-  var origin = {lat: 38.715397605829104, lng: -9.144138615469952};
+  var origin = {lat: 38.72022768665229, lng: -9.154320280359785};
   var destination = {lat: 38.71498298124079, lng: -9.145882005009437};
   // The markers for The Dakota and The Frick Collection
   /*var mk1 = new google.maps.Marker({position: origin, map: map});
@@ -102,4 +102,10 @@ function initMap() {
     }
     
     
+  }
+
+  var toggleForm = function() {
+
+    document.getElementById('form').style.display='block';
+    document.getElementById('center').style.display='none';
   }

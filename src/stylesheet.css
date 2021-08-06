@@ -12,6 +12,7 @@ body{
         margin-left: auto;
         text-align: center;
         width: 90%;
+        cursor: pointer;
 }
 
 .formformfrom {
@@ -46,10 +47,11 @@ body{
   margin-right: auto;
   text-align: center;
   background-color: #1C1C1B;
+  cursor: pointer;
 }
 
 #donateform{
-  display: flex;
+  display: block;
   margin-top: auto;
-  position: relative;
+  margin-left: 400px;
 }

@@ -43,7 +43,7 @@
       ​
       <!-- FORM -->
 
-      <img src="/Images/bAPPman logo.png" class="logoImage">
+      <a><img src="/Images/bAPPman logo.png" class="logoImage" onclick="toggleForm()"></a>
       
       <p></p>
       <br>
@@ -74,21 +74,7 @@
         </div>
 
       </form>
-      <div>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="donateform">
-        <!-- Identify your business so that you can collect the payments. -->
-        <input type="hidden" name="business" value="brucewayne@gmail.com">
-        <!-- Specify a Donate button. -->
-        <input type="hidden" name="cmd" value="_donations">
-        <!-- Specify details about the contribution -->
-        <input type="hidden" name="item_name" value="Wayne Foundation">
-        <input type="hidden" name="item_number" value="Street Cleaning Movement">
-        <input type="hidden" name="currency_code" value="EUR">
-        <!-- Display the payment button. -->
-        <input type="image" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate">
-        <img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
-      </form>
-      </div>
+      
     </div>
   </div>
 
@@ -96,9 +82,27 @@
 
   <div id="center">
     <div id="msg"></div>
+    <br>
     <div id="map"></div>
-    <div id="msg"></div>
+    <br>
+    <br>
   </div>
+
+  <div id="donate">
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="donateform">
+      <!-- Identify your business so that you can collect the payments. -->
+      <input type="hidden" name="business" value="brucewayne@gmail.com">
+      <!-- Specify a Donate button. -->
+      <input type="hidden" name="cmd" value="_donations">
+      <!-- Specify details about the contribution -->
+      <input type="hidden" name="item_name" value="Wayne Foundation">
+      <input type="hidden" name="item_number" value="Street Cleaning Movement">
+      <input type="hidden" name="currency_code" value="EUR">
+      <!-- Display the payment button. -->
+      <input type="image" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate">
+      <img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+    </form>
+    </div>
   ​
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
@@ -117,4 +121,3 @@
 ​
 
 </html>
-​
