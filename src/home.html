@@ -1,63 +1,64 @@
 <!doctype html>
 <html class="no-js" lang="">
 ​
+
 <head>
-​
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-​
+  ​
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> ​
   <meta charset="utf-8">
   <title></title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-​
+  <meta name="viewport" content="width=device-width, initial-scale=1"> ​
   <meta property="og:title" content="">
   <meta property="og:type" content="">
   <meta property="og:url" content="">
-  <meta property="og:image" content="">
-​
+  <meta property="og:image" content=""> ​
   <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-​
+  <link rel="apple-touch-icon" href="icon.png"> ​
   <!-- Place favicon.ico in the root directory -->
-​
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-​  <link rel="stylesheet" href="stylesheet.css">
+  ​
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"> ​
+  <link rel="stylesheet" href="stylesheet.css">
   <meta name="theme-color" content="#1C1C1B">
 
   <style>
     /* Set the size of the div element that contains the map */
-   #map {
-     height: 400px;
-     width: 600px;
+
+    #map {
+      height: 400px;
+      width: 600px;
     }
- </style>
+  </style>
 </head>
 ​
+
 <body>
-​
+  ​
   <div class="jumbotronjumbotron-fluid">
-        
+
     <div class="container">
-​
+      ​
       <p></p>
-​
-  <!-- FORM -->
-  
-      <img src="/Images/bAPPman logo.png" class="logoImage" >
+      ​
+      <!-- FORM -->
+
+      <img src="/Images/bAPPman logo.png" class="logoImage">
+      
       <p></p>
       <br>
       <form class="formformfrom" id="form" style="display: block;">
-    
+
         <div class="mb-0">
           <label for="exampleInputEmail1" id="formtitle">First Name</label>
           <input type="first name" class="form-control" id="InputFirstName" placeholder="first name">
         </div>
-  ​
+        ​
         <div class="mb-0">
           <label for="exampleInputLastName1" id="formtitle">Last Name</label>
           <input type="last name" class="form-control" id="InputLastName" placeholder="last name">
         </div>
-  ​
+        ​
         <div class="mb-4">
           <label for="exampleInputPhone1" id="formtitle">Phone</label>
           <input type="Phone" class="form-control" id="InputPhone" placeholder="Phone">
@@ -65,28 +66,43 @@
 
         <div class="mb-3">
           <label for="exampleInputEmail1" id="formtitle">Situation</label>
-          <textarea type="text" class="form-control" id="InputEmail" placeholder="There's always a Batman ready to deploy" 
-            rows="3"></textarea>
+          <textarea type="text" class="form-control" id="InputEmail" placeholder="There's always a Batman ready to deploy" rows="3"></textarea>
         </div>
-​         
+        ​
         <div id="submitButton">
-          <button type="submit" src="/Images/Batman logo (layers)_4.gif" onclick="loadMap()" width="400px"> </a>
+          <img src="/Images/Batman logo (layers)_4.gif" onclick="loadMap()" width="400px" type="submitButton">
         </div>
 
       </form>
+      <div>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="donateform">
+        <!-- Identify your business so that you can collect the payments. -->
+        <input type="hidden" name="business" value="brucewayne@gmail.com">
+        <!-- Specify a Donate button. -->
+        <input type="hidden" name="cmd" value="_donations">
+        <!-- Specify details about the contribution -->
+        <input type="hidden" name="item_name" value="Wayne Foundation">
+        <input type="hidden" name="item_number" value="Street Cleaning Movement">
+        <input type="hidden" name="currency_code" value="EUR">
+        <!-- Display the payment button. -->
+        <input type="image" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate">
+        <img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+      </form>
+      </div>
     </div>
   </div>
+
+
 
   <div id="center">
     <div id="msg"></div>
     <div id="map"></div>
     <div id="msg"></div>
   </div>
-​
+  ​
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-​
+  <script src="js/main.js"></script> ​
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
@@ -94,11 +110,11 @@
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
   <!--Load the API from the specified URL -- remember to replace YOUR_API_KEY-->
-  <script src = 'scripts/distance.js'></script>
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkl2hxGta8Dr7Bi2hYwPdeFCrW9lntVcY&callback=initMap">
+  <script src='scripts/distance.js'></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkl2hxGta8Dr7Bi2hYwPdeFCrW9lntVcY&callback=initMap">
   </script>
 </body>
 ​
+
 </html>
 ​

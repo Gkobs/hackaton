@@ -8,8 +8,9 @@ body{
 
 .logoImage{
         display: block;
-        margin-left: auto;
         margin-right: auto;
+        margin-left: auto;
+        text-align: center;
         width: 90%;
 }
 
@@ -44,9 +45,11 @@ body{
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  background-color: #1C1C1B;
 }
 
-#InputEmail{
-  height: 150px;
-  vertical-align: text-top;
+#donateform{
+  display: flex;
+  margin-top: auto;
+  position: relative;
 }
