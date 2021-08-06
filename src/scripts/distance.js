@@ -3,6 +3,7 @@ var originLatitude;
 var originLongitude;
 
 
+
 var API_GEO_URL = '';
 
 var getCoords = function() {
@@ -25,9 +26,8 @@ var options = {
 
     originLatitude = parseFloat(`${crd.latitude}`);
     originLongitude = parseFloat(`${crd.longitude}`);
-
   }
-  
+
   function error(err) {
     console.warn(`ERROR(${err.code}): ${err.message}`);
   }
@@ -46,10 +46,7 @@ function initMap() {
   // Locations of landmarks
   var origin = {lat: 38.715397605829104, lng: -9.144138615469952};
   var destination = {lat: 38.71498298124079, lng: -9.145882005009437};
-  // The markers for The Dakota and The Frick Collection
-  /*var mk1 = new google.maps.Marker({position: origin, map: map});
-  var mk2 = new google.maps.Marker({position: destination, map: map});
-*/
+  
   let directionsService = new google.maps.DirectionsService();
   let directionsRenderer = new google.maps.DirectionsRenderer();
   directionsRenderer.setMap(map); 
@@ -82,18 +79,12 @@ function initMap() {
 
   var loadMap = function(){
 
-   
-
     var inputFirstName = document.getElementById('InputFirstName').value;
     var inputLastName = document.getElementById('InputLastName').value;
     var inputPhone = document.getElementById('InputPhone').value;
     var inputSituation = document.getElementById('InputEmail').value;
 
-    console.log(inputFirstName + ' ' + inputLastName + ' ' + inputPhone + ' ' + inputSituation);
-    console.log(typeof inputFirstName);
-
     if(inputFirstName !== '' && inputLastName !== '' && inputPhone !== '' && inputSituation !== ''){
-
       document.getElementById('form').style.display='none';
       document.getElementById('center').style.display='inline';
       
@@ -101,5 +92,6 @@ function initMap() {
       initMap();
     }
     
-    
   }
+
+  
